@@ -1,0 +1,21 @@
+{
+  "name": "csv-service",
+  "version": "1.0.0",
+  "description": "microservice para convertir archivos.csv a JSON",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "author": "mauro neagoe",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "multer": "^1.4.2",
+    "papaparse": "^5.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
