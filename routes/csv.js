@@ -11,7 +11,7 @@ const limit = { fileSize: 1024 * 1024 * 10 } // 10MB
 const upload = multer({ storage: storage, limits: limit });
 
 
-router.post('/', upload.single('file'), csv.csvToJson);
+router.post('/', upload.single('csvFile'), csv.csvToJson);
 
 
 
