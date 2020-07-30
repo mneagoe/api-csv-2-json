@@ -1,37 +1,9 @@
 <h1 class="text-center mb-3">CSV Service</h1>
-<form action="/csv" method="POST" enctype="multipart/form-data" class="mb-4">
+<form action="/" method="POST" enctype="multipart/form-data" class="mb-4">
     <div class="form-group">
         <label for="csvFile">Upload CSV file:</label>
         <input type="file" name="csvFile" class="form-control-file">
     </div>
-    {{!-- <input type="submit"> --}}
     <button class="btn btn-primary" type="submit">Convert</button>
 </form>
-<code>
-    [
-    {
-        "37": 36,
-        "mauro": "luis",
-        "neagoe": "dabu",
-        "almagro": "almagro"
-    },
-    {
-        "37": 34,
-        "mauro": "marco",
-        "neagoe": "llahyah",
-        "almagro": "balbanera"
-    },
-    {
-        "37": 40,
-        "mauro": "mabel",
-        "neagoe": "masiel",
-        "almagro": "villa del parque"
-    },
-    {
-        "37": 27,
-        "mauro": "agustín",
-        "neagoe": "robles",
-        "almagro": "longchamp"
-    }
-]
-</code>
+<pre class="pre-scrollable">{{result}}</pre>

@@ -7,14 +7,11 @@ exp.csvToJson = async (req, res) => {
         if (!req.file) throw 'No file was sent.';
         const fileString = req.file.buffer.toString('latin1');
         const data = await csv.csvToJson(fileString);
-        res.json(data);
+        res.render('home', {result: JSON.stringify(data, null, 4)});
         
     } catch (error) {
         console.error(error);
-        res.status(400).json({
-            success: false,
-            message: `Could not convert file.`
-        })
+        res.render('home', {result: `Could not convert file.`});
     }
 }
 
