@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const csv = require('../controllers/csv');
+const home = require('../controllers/home');
 const multer = require('multer');
 
 // This sets multer to store file in memory (as a buffer).
@@ -11,10 +11,7 @@ const limit = { fileSize: 1024 * 1024 * 10 } // 10MB
 const upload = multer({ storage: storage, limits: limit });
 
 
-router.post('/', upload.single('csvFile'), csv.csvToJson);
-
-
-
-
+router.get('/', (req, res) => res.render('home'))
+router.post('/', upload.single('csvFile'), home.csvToJson);
 
 module.exports = router;
