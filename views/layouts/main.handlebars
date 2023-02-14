@@ -12,4 +12,10 @@
         {{{body}}}
     </div>    
 </body>
+<script>
+    function copyToClipboard() {
+        const copiedJson = document.querySelector('pre').innerHTML;
+        navigator.clipboard.writeText(copiedJson);
+    }
+</script>
 </html>
