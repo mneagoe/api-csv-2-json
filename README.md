@@ -1,5 +1,5 @@
 # CSV to JSON Api
-### A smiple service for parsing csv files into json objects.
+### A simple service for parsing csv files into json objects.
 
 ## Getting Started
 After cloning, go into the projects generated directory and run:
